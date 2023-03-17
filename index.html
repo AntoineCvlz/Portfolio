@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Icon -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"></script>
+    <!-- Sendmail -->
+    <script src="script.js"></script>
+    <script async src="https://www.google.com/recaptcha/api.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("2eqlKTrq2bgtHbjx3");
+        })();
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.5.5/perfect-scrollbar.min.js"></script>
+
+    <script src="scrolldiv.js"></script>
+    <link rel="stylesheet" href="container.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"></script>
+    <script src="https://kit.fontawesome.com/abadf74544.js" crossorigin="anonymous"></script>
+
+
+
+    <title>Portfolio Antoine Cuvilliez</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo">Antoine Cuvilliez</a>
+        <div class="nav-links">
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">CV</a></li>
+                <li><a href="#">Compétences</a></li>
+                <li><a href="#">Projets</a></li>
+                <li><a href="#">Veille</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <img src="menu-btn.png" alt="menu-hamburger" class="menu-hamburger">
+    </nav>
+    <header></header>
+    <script>
+        const menuHamburger = document.querySelector(".menu-hamburger")
+        const navLinks = document.querySelector(".nav-links")
+
+        menuHamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('mobile-menu')
+        })
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="aparent">
+        <div class="achild" id="slide1" style="height:200px;">
+        </div>
+    </div>
+    <div class="page">
+        <h3>CV</h3>
+
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+        et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+        dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+        magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    </div>
+
+
+
+
+
+
+
+    <div class="aparent">
+        <div class="achild" id="slide2" style="height:200px;">
+        </div>
+    </div>
+    <div class="page">
+        <h3>Compétences</h3>
+
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+        et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+        dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+        magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    </div>
+
+    <div class="aparent">
+        <div class="achild" id="slide3" style="height:200px;">
+        </div>
+    </div>
+    <div class="page">
+        <h3>Projets</h3>
+
+        
+        
+        
+
+    </div>
+    
+
+    <div class="aparent">
+        <div class="achild" id="slide4" style="height:200px;">
+        </div>
+    </div>
+    <div class="page">
+        <h3>Veille</h3>
+
+        <div id="feed"></div>
+
+
+
+
+
+        <div class="carousel">
+	
+            <div class="carousel_button carousel_button-left is-hidden">
+                <i class="fa fa-chevron-left fa-3x" style="color:#212121"></i>
+            </div>
+            <div class="carousel_button carousel_button-right" style="color:#212121">
+                <i class="fa fa-chevron-right fa-3x"></i>
+            </div>
+        
+            <div class="carousel_track-container">
+                <ul class="carousel_track">
+                    <li class="carousel_slide current-slide">
+                        <div class="article" style="background-color: red;"> 
+                            <p>test</p>
+                        </div>
+                    </li>
+                    <li class="carousel_slide">
+                        <div class="article" style="background-color: greenyellow;"> 
+                            <p>test</p>
+                        </div>
+                    </li>
+                    <li class="carousel_slide">
+                        <div class="article" style="background-color: blue;"> 
+                            <p>test</p>
+                        </div>
+                    </li>              
+                </ul>
+            </div>	
+
+            
+          
+              <div class="carousel_nav">
+                <button class="carousel_indicator current-slide"></button>
+                <button class="carousel_indicator"></button>
+                <button class="carousel_indicator"></button>
+            </div>
+            <script type="text/javascript" src="slider-veille.js"></script>
+        </div>
+
+
+
+        <!-- <div id="feed">
+            <div class="wrap-feed">
+                <div class="post-feeds">
+
+                
+            <div class="post-feeds">
+                <image class="divimage-feed"><img class="image-feed" src="60d5f02dbec0499a64abd8ca_big-data.jpeg">
+                </image>
+                <h2 class="titrePost-feed">
+                    <p class="feed-link feed-title">RGPD&nbsp;: Titre a insérer Sujet 3 Big data</p>
+                </h2>
+                <p class="text-feed" maxlength="4">
+                    Texte RGPD.</p>
+                <p class="pubDate">Date publication</p>
+
+                <a href="https://www.cnil.fr/fr/definition/big-data#:~:text=On%20parle%20depuis%20quelques%20ann%C3%A9es,%2C%20photos%2C%20vid%C3%A9os%2C%20etc."
+                    target="_blank" class="readmore-feed">En savoir
+                    plus</a>
+
+
+            </div>
+        </div>
+    </div>
+-->
+
+
+
+
+    <script type="text/javascript"
+        src="https://api.rss2json.com/v1/api.json?callback=showFeed&rss_url=https%3A%2F%2Fwww.01net.com%2Factualites%2Fsecurite%2Ffeed%2F">
+        </script>
+
+
+
+    </div>
+
+    <div class="aparent">
+        <div class="achild" id="slide5" style="height:200px;">
+        </div>
+    </div>
+    <div class="page">
+        <div class="contact-container">
+            <div class="title-div">
+                <p class="titre">Contactez-moi</p>
+            </div>
+
+            <div class="contact">
+                <div class="social-div">
+                    <div class="ligne">
+                        <a href="https://fr.linkedin.com/in/antoine-cuvilliez-257969225/" class="social-contact">
+                            <ion-icon name="logo-linkedin"></ion-icon>
+                        </a>
+                        <a href="https://fr.linkedin.com/in/antoine-cuvilliez-257969225/" target="_blank"
+                            class="links">Linkedin</a>
+                    </div>
+                    <div class="ligne">
+                        <a href="#" class="social-contact">
+                            <ion-icon name="logo-github"></ion-icon>
+                        </a>
+                        <a href="#" target="_blank" class="links">Github</a>
+                    </div>
+                    <div class="ligne">
+                        <a href="mailto:antoine.cuvilliez@outlook.fr" class="social-contact">
+                            <ion-icon name="mail-open"></ion-icon>
+                        </a>
+                        <a href="mailto:antoine.cuvilliez@outlook.fr" target="_blank" class="links">Mail</a>
+                    </div>
+                    <div class="ligne">
+                        <a href="#" class="social-contact">
+                            <ion-icon name="call-outline"></ion-icon>
+                        </a>
+                        <a href="tel:+33749391402" target="_blank" class="links">Téléphone</a>
+                    </div>
+
+                </div>
+                <hr>
+                <form class="form-block">
+                    <div class="div-name">
+                        <label for="name">Nom<span class="star">*</span></label>
+                        <input type="text" id="name" placeholder="Nom" required />
+                    </div>
+                    <div class="div-email">
+                        <label for="email">Email<span class="star">*</span></label>
+                        <input type="email" id="email" placeholder="Email" required />
+                    </div>
+
+                    <div class="div-message">
+                        <label for="message">Message<span class="star">*</span></label>
+                        <textarea id="message" rows="3" placeholder="Message" required></textarea>
+                    </div>
+
+                    <!-- <div class="g-recaptcha" data-sitekey="6LeIOaEkAAAAAMgI0QB8Jafgo92i72O5OgGjG8Ek"></div> -->
+
+
+                    <a type="submit" class="btn-submit" id="2" onclick="sendMail()">Envoyer</a>
+                </form>
+
+
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="div-footer">
+            <div class="footer-top">
+                <div class="footer-col">
+                    <h3>A propos</h3>
+                    <a href="#">Services</a>
+                    <a href="#">Histoire de l'entreprise</a>
+                    <a href="#">Nos Clients</a>
+                    <a href="#">Carrière</a>
+                </div>
+                <div class="footer-col">
+                    <h3>Ressources</h3>
+                    <a href="#">Documents</a>
+                    <a href="#">Blog</a>
+                    <a href="#">eBooks</a>
+                    <a href="#">Webinaires</a>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <a href="#">Aide & Conseils</a>
+                    <a href="#">SAV</a>
+                    <a href="#">Demande de devis</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <a href="#" class="social">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+                <a href="#" class="social">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+                <a href="#" class="social">
+                    <ion-icon name="mail-open"></ion-icon>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>
