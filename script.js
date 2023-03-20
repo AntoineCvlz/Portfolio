@@ -3,16 +3,22 @@ function sendMail() {
         name: document.getElementById("name").value,
         email: document.getElementById("email").value,
         message: document.getElementById("message").value,
+        captcha: document.getElementById("captcha").value,
+    
     };
 
     const serviceID = "service_k01y6k7";
     const templateID = "template_bvy0op8";
+
+
+   
 
     emailjs.send(serviceID, templateID, params)
         .then(res => {
             document.getElementById("name").value = "";
             document.getElementById("email").value = "";
             document.getElementById("message").value = "";
+            document.getElementById("captcha").value = "";
             console.log(res);
             alert("Ton message vient d'être envoyé !")
 

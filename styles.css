@@ -11,7 +11,7 @@ body {
     -webkit-font-feature-settings: 'kern' 1;
     -o-font-feature-settings: 'kern' 1;
     text-rendering: geometricPrecision;
-    -webkit-font-smoothing: antialiased
+    -webkit-font-smoothing: antialiased;
 }
 
 /* body::-webkit-scrollbar {
@@ -121,7 +121,178 @@ header {
 
 
 
-  
+
+
+/* Projets */
+
+
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-list .project-card {
+    width: 28.3018867925%;
+    margin-top: 35px;
+    box-shadow: 0px 2px 4px -1px #747474;
+    
+}
+
+.project-list .project-card:hover {
+    box-shadow: 0px 4px 8px -1px #747474;
+    width: 28.3018867925%;
+}
+
+.project-list .project-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #007bff;
+}
+
+.project-list .project-card .project-info {
+    padding: 10px;
+    text-align: center;
+    
+}
+
+.project-list .project-card .project-info a {
+    font-family: sans-serif;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.project-list .project-card .project-info a:hover {
+    color: #4d4d4d;
+}
+
+.project-list .project-card .project-info p {
+    font: serif;
+    padding-top: 0px;
+    margin-top: 0px;
+    margin-bottom: 0;
+}
+
+
+
+h4 {
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Compétences */
+
+.topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    row-gap: 16px;
+}
+
+.topics .topic {
+    padding: 10px;
+    margin: 0px;
+    width: 280px;
+    height: 280px;
+}
+
+.topics .topic .icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.topics .topic .icon-box .topic-icon {
+    padding: 0px;
+    margin-top: 10px;
+}
+
+.topics .topic .topic-title {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.topics .topic .topic-text {
+    text-align: center;
+    font-size: 120%;
+    margin-top: 10px;
+}
+
+.topics .topic:hover,
+.topics .topic:active {
+    color: #007bff;
+}
+
+.topics .topic:hover .topic-text,
+.topics .topic:active .topic-text,
+.topics .topic:hover .topic-title,
+.topics .topic:active .topic-title {
+    color: #212121;
+}
+
+
+/* .topics .topic:hover .fa-inverse,
+.topics .topic:active .fa-inverse {
+    
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #btn-veille {
     display: inline-block;
     cursor: pointer;
@@ -151,109 +322,37 @@ header {
 
 
 
-/* carrousel */
+/* Articles de veille */
 
-.carousel {
-    position: relative;
-    height: 600px;
-    width: 90%;
-    margin: 0 auto;
-    border: 1px solid #007bff;
-}
 
-.carousel_track-container {
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-}
 
-.carousel_track {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    position: relative;
-    height: 100%;
-    transition: transform 250ms ease-in-out;
-}
 
-.carousel_slide {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-}
 
-/* .carousel_image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-} */
 
-.carousel_button {
-    position:absolute;
-    top: 0;
-    height: 100%;
-    width: 90px;
-    z-index: 2;
-    color: #fff;
-    text-align: center;
-    transition: all .7s ease-in-out;
-}
 
-.carousel_button i {
-    position: absolute;
-    top: 50%;
-    cursor: pointer;
-    transform: translate(-50% , -50%);
-}
-.carousel_button-left {
-    left: 0;
-    border-radius:  0 50% 50% 0 ;
-}
 
-.carousel_button-right {
-    right: 0;
-    border-radius:  50% 0 0 50% ;
-}
 
-/* .carousel_button i:hover {
-    color: #007bff;
-}  */
 
-.carousel_nav {
-    position: relative;
-    bottom: 30px;
-    display: flex;
-    justify-content: center;
-    }
 
-.carousel_indicator {
-    border: 2px solid #007bff;
-    background-color: #212121;
-    width: 80px;
-    height: 10px;
-    margin: 3px;
-    cursor: pointer;
-}
 
-.carousel_indicator.current-slide{
+
+
+.btnMenue {
+
     background-color: #007bff;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 10px;
+
+
 }
 
-.is-hidden {
-    display: none;
+.col1 {
+    text-align: center;
+    margin-bottom: 15px;
+
 }
-
-
-
-
-
-
-.article {
-    width: 100%;
-    height: 100%;
-}
-
 
 
 
@@ -442,12 +541,12 @@ header {
 
 
 .hr {
-    border:         none;
-    border-left:    1px solid white;
-    height:         100vh;
-    width:          1px;    
+    border: none;
+    border-left: 1px solid white;
+    height: 100vh;
+    width: 1px;
 }
-     
+
 
 
 
@@ -455,7 +554,7 @@ header {
     width: 100%;
     max-width: 1000px;
     padding: 1rem;
-    
+
 }
 
 
@@ -524,11 +623,11 @@ header {
 }
 
 
-.links{
+.links {
     color: white;
     text-decoration: underline;
     cursor: pointer;
-  
+
 }
 
 
@@ -610,12 +709,15 @@ header {
     .contact {
         flex-direction: column;
     }
+
     .contact-container input {
         width: 75%;
     }
+
     .contact-container textarea {
         width: 75%;
     }
+
     .contact-container label {
         font-size: 75%;
     }
