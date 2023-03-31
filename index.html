@@ -35,34 +35,92 @@
     <title>Portfolio Antoine Cuvilliez</title>
 </head>
 
-<body>
-    <nav class="navbar">
-        <a href="#" class="logo">Antoine Cuvilliez</a>
-        <div class="nav-links">
-            <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">CV</a></li>
-                <li><a href="#">Compétences</a></li>
-                <li><a href="#">Projets</a></li>
-                <li><a href="#">Veille</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+<body id="body">
+    <header>
+        <nav class="navbar">
+            <a class="logo">Antoine Cuvilliez</a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#body" style="cursor: pointer;">Accueil</a></li>
+                    <li><a href="#cv" style="cursor: pointer;">CV</a></li>
+                    <li><a href="#competence" style="cursor: pointer;">Compétences</a></li>
+                    <li><a href="#projets" style="cursor: pointer;">Projets</a></li>
+                    <li><a href="#veille" style="cursor: pointer;">Veille</a></li>
+                    <li><a href="#contact" style="cursor: pointer;">Contact</a></li>
+                </ul>
+            </div>
+
+
+
+            <div class="menue-btn">
+                <img src="menu-btn.png" alt="menu-hamburger" class="menu-hamburger">
+            </div>
+        </nav>
+
+        <script>
+            const menuHamburger = document.querySelector(".menu-hamburger")
+            const navLinks = document.querySelector(".nav-links")
+
+            let menuOpen = false;
+
+            menuHamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('mobile-menu')
+
+                if (!menuOpen) {
+                    menuOpen = true;
+                    document.getElementById("body").classList.add("active");
+
+                }
+
+                else {
+                    menuOpen = false;
+                    document.getElementById("body").classList.remove("active");
+                }
+
+            })
+            navLinks.addEventListener('click', () => {
+                navLinks.classList.toggle('mobile-menu');
+                document.getElementById("body").classList.remove("active");
+            })
+
+
+
+
+        </script>
+
+    
+
+        <!-- <div class="div-ecriture">
+            <div class="ecriture">
+
+                <h2><span class="auto-type"></span></h2>
+
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+            <script>
+                var typed = new Typed(".auto-type", {
+                    strings: ["Antoine Cuvilliez", "BTS SIO", "OPTION SLAM"],
+                    typeSpeed: 150,
+                    backSpeed: 50,
+                    loop: true
+                })
+            </script>
+        </div> -->
+    
+        
+
+        <div class="menu-main">
+            
+            <div class="gauche">
+                <h3>Portfolio</h3>
+            </div>
+            <div class="droite">
+                <img class="img-main" src="PC.png">
+            </div>
         </div>
-        <img src="menu-btn.png" alt="menu-hamburger" class="menu-hamburger">
-    </nav>
-    <header></header>
-    <script>
-        const menuHamburger = document.querySelector(".menu-hamburger")
-        const navLinks = document.querySelector(".nav-links")
 
-        menuHamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('mobile-menu')
-        })
-    </script>
-
-
-
-
+    </header>
 
 
 
@@ -77,16 +135,95 @@
         <div class="achild" id="slide1" style="height:200px;">
         </div>
     </div>
+    <div class="marge" id="cv"></div>
     <div class="page">
-        <h3>CV</h3>
+        <div class="titre1">CV</div>
+        <div class="presentation-container">
+            <div class="titre2">Presentation</div>
+            <div class="presentation">
+                Je m'appelle Antoine Cuvilliez, j'ai 19 ans et j'habite à Fressain dans le Douaisis.
+                Actuellement en 2ème année de BTS SIO option Slam, j'aimerais poursuivre mes études
+                pour pouvoir travailler dans le developpement d'applications.
+            </div>
+        </div>
 
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-        et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-        rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-        dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-        magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+        <div class="qualite">
+            <div class="titre2" style="margin-left: 8px;">Qualités</div>
+            <div class="topics" style="margin-top: 20px;">
+                <div class="topic"
+                    style="border: 2px solid black; background-color: #212121; width: 150px; height: auto; border-radius: 15px; padding: 2em;">
+                    <div class="icon-box">
+                        <div class="topic-icon">
+                            <i class="fa-sharp fa-solid fa-5x fa-magnifying-glass fa-inverse"></i>
+                        </div>
+                    </div>
+                    <div class="topic-title" style="color: white; margin-top: 20px;">
+                        <h2>Curiosité</h2>
+                    </div>
+                </div>
+                <div class="topic"
+                    style="border: 2px solid black; background-color: #212121; width: 150px; height: auto; border-radius: 15px; padding: 2em;">
+                    <div class="icon-box">
+                        <div class="topic-icon">
+                            <i class="fa-solid fa-5x fa-user fa-inverse"></i>
+                        </div>
+                    </div>
+                    <div class="topic-title" style="color: white; margin-top: 20px;">
+                        <h2>Autonomie</h2>
+                    </div>
+                </div>
+                <div class="topic"
+                    style="border: 2px solid black; background-color: #212121; width: 150px; height: auto; border-radius: 15px; padding: 2em;">
+                    <div class="icon-box">
+                        <div class="topic-icon">
+                            <i class="fa-solid fa-bolt fa-5x fa-inverse"></i>
+                        </div>
+                    </div>
+                    <div class="topic-title" style="color: white; margin-top: 20px;">
+                        <h2>Perséverance</h2>
+                    </div>
+                </div>
+                <div class="topic"
+                    style="border: 2px solid black; background-color: #212121; width: 150px; height: auto; border-radius: 15px; padding: 2em;">
+                    <div class="icon-box">
+                        <div class="topic-icon">
+                            <i class="fa-solid fa-code fa-5x fa-inverse"></i>
+                        </div>
+                    </div>
+                    <div class="topic-title" style="color: white; margin-top: 20px;">
+                        <h2>Passion</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="documents">
+            <div class="titre2" style="margin-left: 8px;">Mes documents</div>
+            <a href="CV Antoine CUVILLIEZ.pdf" target="_blank">
+                <div class="btn-doc">
+                    CV
+                </div>
+            </a>
+            <a href="Tableau E4 de  CUVILLIEZ Antoine.pdf" target="_blank">
+                <div class="btn-doc">
+                    Mon tableau de compétences
+                </div>
+            </a>
+            <a href="Certifcations-AtelierRGPD.pdf" target="_blank">
+                <div class="btn-doc">
+                    Atelier RGPD
+                </div>
+            </a>
+            <a href="Attestation mooc Anssi Antoine Cuvilliez.pdf" target="_blank">
+                <div class="btn-doc">
+                    Mooc de l'Anssi
+                </div>
+            </a>
+        </div>
+
     </div>
+    <div class="marge"></div>
+
 
 
 
@@ -98,8 +235,9 @@
         <div class="achild" id="slide2" style="height:200px;">
         </div>
     </div>
+    <div class="marge" id="competence"></div>
     <div class="page">
-        <h3>Compétences</h3>
+        <div class="titre1">Compétences</div>
 
         <div class="topics">
             <div class="topic">
@@ -124,8 +262,8 @@
                     <h2>CSS</h2>
                 </div>
                 <div class="topic-text">
-                    <p>A renseigner</p>
-                    <p>A renseigner</p>
+                    <p>Création de site vitrine</p>
+                    <p>Media query</p>
                 </div>
             </div>
             <div class="topic">
@@ -139,7 +277,8 @@
                 </div>
                 <div class="topic-text">
                     <p>Utilisation de PDO</p>
-                    <p>A renseigner</p>
+                    <p>Formulaire POST et GET</p>
+                    <p>Session et Cookies</p>
                 </div>
             </div>
             <div class="topic">
@@ -152,8 +291,7 @@
                 </div>
                 <div class="topic-text">
                     <p>Utilisation de JQuery</p>
-                    <p>A renseigner</p>
-                    <p>A renseigner</p>
+                    <p>Flux RSS</p>
                 </div>
             </div>
             <div class="topic">
@@ -179,8 +317,8 @@
                     <h2>Python</h2>
                 </div>
                 <div class="topic-text">
-                    <p>A renseigner</p>
-                    <p>A renseigner</p>
+                    <p>Bases du language</p>
+                    <p>Pseudo-code</p>
                 </div>
             </div>
             <div class="topic">
@@ -194,25 +332,26 @@
                 </div>
                 <div class="topic-text">
                     <p>MCD / MLD</p>
-                    <p>A renseigner</p>
+                    <p>Requetes avancées</p>
+                    <p>Trigger et procédures stockées</p>
                 </div>
             </div>
             <div class="topic">
                 <div class="icon-box">
                     <div class="topic-icon"><span class="fa-stack fa-4x"><i class="fa fa-circle fa-stack-2x"></i><i
-                                class="fa-brands fa-microsoft fa-stack-1x fa-inverse"></i></span></div>
-
+                                class="fa-solid fa-diagram-project fa-stack-1x fa-inverse"></i></span></div>
                 </div>
                 <div class="topic-title">
-                    <h2>Suite office</h2>
+                    <h2>Gestion de projet</h2>
                 </div>
                 <div class="topic-text">
-                    <p>Rédaction de documentation technique</p>
-                    <p>Rédaction de compte-rendu</p>
+                    <p>Utilisation de Trello / Click up</p>
+                    <p>Méthode agile</p>
                 </div>
             </div>
         </div>
     </div>
+    <div class="marge"></div>
 
 
 
@@ -223,286 +362,192 @@
         <div class="achild" id="slide3" style="height:200px;">
         </div>
     </div>
+    <div class="marge" id="projets"></div>
     <div class="page">
-        <h3>Projets</h3>
-
-
-
-
-        <div class="project-list">
-            <div class="project-card">
-              <a href="#">
-                <img src="Mastermind.PNG" alt="picture">
-              </a>
-              <div class="project-info">
-                <h3><a href="#">Mastermind</a></h3>
-                <p>Utilisation de JS</p>
-              </div>
-            </div>
-            
-              <div class="project-card">
-              <a href="#">
-                <img src="https://placehold.it/250x200" alt="picture">
-              </a>
-              <div class="project-info">
-                <h3><a href="#">Site vitrine</a></h3>
-                <p>Création d'un site vitrine en HTML, CSS et JS </p>
-              </div>
-            </div>
-              <div class="project-card">
-                <a href="#">
-                  <img src="https://placehold.it/250x200" alt="picture">
-                </a>
-                <div class="project-info">
-                  <h3><a href="#">Calculatrice</a></h3>
-                  <p>Java Swing, JUNIT </p>
+        <div class="titre1">Projets</div>
+        <div class="titre2" style="margin-left: 8px;">Atelier pro</div>
+        <div class="cards-projets">
+            <div class="services">
+                <div class="content content-1">
+                    <img class="img-project lpf" src="lpf_logo_noir.png">
+                    <h2>LPF Clinique</h2>
+                    <p>
+                        Projet professionnel effectués durant toute l'année
+                    </p>
+                    <a href="">En savoir plus</a>
                 </div>
-            </div>   
-              
-          </div>
-
-          <h4>Stage</h4>
-
-          <div class="project-list">
-            <div class="project-card">
-              <a href="#">
-                <img src="bils-deroo.png" alt="picture">
-              </a>
-              <div class="project-info">
-                <h3><a href="#">Refonte du portail intranet</a></h3>
-                <p>Stage de 2ème année à Bils deroo</p>
-              </div>
             </div>
-            
-              <div class="project-card">
-              <a href="#">
-                <img src="SET-Système-étude-technique.png" alt="picture">
-              </a>
-              <div class="project-info">
-                <h3><a href="#">Site vitrine</a></h3>
-                <p>Stage de 1ère année à SET</p>
-              </div>
-            </div>   
-              
-          </div>
+        </div>
+        <div class="titre2" style="margin-left: 8px;">Stages</div>
+        <div class="cards-projets">
+            <div class="services">
+                <div class="content content-2">
+                    <img class="img-project SET" src="SET-Système-étude-technique.png">
+                    <h2>SET</h2>
+                    <p>Stage de 1ère année</p>
+                    <a href="">En savoir plus</a>
+                </div>
 
-
-
-
-
-
-
-
-
-
-
-
+                <div class="content content-3">
+                    <img class="img-project bils" src="BILSDEROO-GROUPE-logo-noir-1.png">
+                    <h2>Bils-Deroo</h2>
+                    <p>
+                        Stage de 2ème année
+                    </p>
+                    <a href="">En savoir plus</a>
+                </div>
+            </div>
+        </div>
     </div>
+    <div class="marge"></div>
+
 
 
     <div class="aparent">
         <div class="achild" id="slide4" style="height:200px;">
         </div>
     </div>
+    <div class="marge" id="veille"></div>
     <div class="page">
-        <h3>Veille</h3>
+        <div class="titre1">Veille</div>
+        <div class="titre2" style="margin-left: 8px;">Cybersécurité</div>
 
         <div id="feed"></div>
 
 
 
-        
-        
 
-        <div class="col1">
-
-            <a class="btnMenue" onclick="toggleVisibility('Menu1'); returnTop('Menu1');">RGPD</a>
-            <a class="btnMenue" onclick="toggleVisibility('Menu2'); returnTop('Menu2');">Big data</a>
-
-        </div>
-
-
-        <div class="col2">
-
-
-            <div id="Menu1">
-
-                <div class="wrap-feed">
-
-                <div class="post-feeds">
-                    <image class="divimage-feed"><img class="image-feed" src="RGPD-MIXconcept.jpg">
-                    </image>
-                    <h2 class="titrePost-feed">
-                        <p class="feed-link feed-title">RGPD&nbsp;: Titre a insérer Sujet 1 RGPD</p>
-                    </h2>
-                    <p class="text-feed" maxlength="4">
-                        Texte RGPD.</p>
-                    <p class="pubDate">Date publication</p>
-    
-                    <a href="https://www.cnil.fr/fr/definition/big-data#:~:text=On%20parle%20depuis%20quelques%20ann%C3%A9es,%2C%20photos%2C%20vid%C3%A9os%2C%20etc."
-                        target="_blank" class="readmore-feed">En savoir
-                        plus</a>
-    
-    
-                </div>
-
-
-                <div class="post-feeds">
-                    <image class="divimage-feed"><img class="image-feed" src="RGPD-MIXconcept.jpg">
-                    </image>
-                    <h2 class="titrePost-feed">
-                        <p class="feed-link feed-title">RGPD&nbsp;: Titre a insérer Sujet 2 RGPD</p>
-                    </h2>
-                    <p class="text-feed" maxlength="4">
-                        Texte RGPD.</p>
-                    <p class="pubDate">Date publication</p>
-    
-                    <a href="https://www.cnil.fr/fr/definition/big-data#:~:text=On%20parle%20depuis%20quelques%20ann%C3%A9es,%2C%20photos%2C%20vid%C3%A9os%2C%20etc."
-                        target="_blank" class="readmore-feed">En savoir
-                        plus</a>
-    
-    
-                </div>
-
-                <div class="post-feeds">
-                    <image class="divimage-feed"><img class="image-feed" src="RGPD-MIXconcept.jpg">
-                    </image>
-                    <h2 class="titrePost-feed">
-                        <p class="feed-link feed-title">RGPD&nbsp;: Titre a insérer Sujet 3 RGPD</p>
-                    </h2>
-                    <p class="text-feed" maxlength="4">
-                        Texte RGPD.</p>
-                    <p class="pubDate">Date publication</p>
-    
-                    <a href="https://www.cnil.fr/fr/definition/big-data#:~:text=On%20parle%20depuis%20quelques%20ann%C3%A9es,%2C%20photos%2C%20vid%C3%A9os%2C%20etc."
-                        target="_blank" class="readmore-feed">En savoir
-                        plus</a>
-    
-    
-                </div>
+        <div class="titre2" style="margin-left: 8px;">Mes articles</div>
+        <div class="Panel">
+            <nav>
+                <ul class="Tabs">
+                    <li class="Tabs__tab active Tab" onclick="toggleVisibility('panel1');"><a>RGPD 1</a></li>
+                    <li class="Tabs__tab Tab" onclick="toggleVisibility('panel2');"><a>RGPD 2</a></li>
+                    <li class="Tabs__tab Tab" onclick="toggleVisibility('panel3');"><a>RGPD 3</a></li>
+                    <li class="Tabs__tab Tab" onclick="toggleVisibility('panel4');"><a>Bigdata 1</a></li>
+                    <li class="Tabs__tab Tab" onclick="toggleVisibility('panel5');"><a>Bigdata 2</a></li>
+                    <li class="Tabs__tab Tab" onclick="toggleVisibility('panel6');"><a>Bigdata 3</a></li>
+                    <li class="Tabs__presentation-slider" role="presentation"></li>
+                </ul>
+            </nav>
+            <div class="Panel__body" id="panel1">
+                <a href="https://www.cnil.fr/fr/carte-vitale-electronique-quelles-consequences-pour-les-personnes"
+                    target="_blank" style="color: black;">
+                    <div class="wrapper">
+                        <div id="one"><img src="rgpd1.png"></div>
+                        <div id="two">
+                            <h3 style="margin-bottom: 10px;"> CARTE VITALE ELECTRONIQUE : QUELLES CONSEQUENCES POUR LES
+                                PERSONNES ?</h3>
+                            <p>À partir du 1er août ou du 1er septembre 2023, l’impression systématique des tickets de
+                                caisse
+                                sera interdite. Vous pourrez demander à recevoir un ticket, ou non, ou encore le
+                                recevoir sous
+                                forme dématérialisée si le commerçant le propose. La CNIL fait le point sur les
+                                changements et
+                                vos droits.
+                            </p>
+                            <p class="publi">cnil.fr - 22 février 2023</p>
+                        </div>
+                    </div>
+                </a>
             </div>
+            <div class="Panel__body" id="panel2">
+                <a href="https://www.cnil.fr/fr/thematiques-prioritaires-de-controle-2023-cameras-augmentees-applications-mobiles-fichiers-bancaires"
+                    target="_blank" style="color: black;">
+                    <div class="wrapper">
+                        <div id="one"><img src="rgpd2.jpeg"></div>
+                        <div id="two">
+                            <h3 style="margin-bottom: 10px;">THEMATIQUES PRIORITAIRES DE CONTROLE 2023 : CAMERAS «
+                                AUGMENTEES »,
+                                APPLICATIONS MOBILES, FICHIERS BANCAIRES ET DOSSIERS PATIENTS</h3>
+                            <p>La CNIL effectue des contrôles sur la base de plaintes reçues, de l’actualité, mais
+                                également de
+                                thématiques prioritaires annuelles. En 2023, elle se concentrera sur l’utilisation de
+                                caméras
+                                « augmentées » par les acteurs publics, l’utilisation du fichier des incidents de crédit
+                                aux particuliers,
+                                la gestion des dossiers de santé et les applications mobiles.
+                            </p>
+                            <p class="publi">cnil.fr - 15 mars 2023</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="Panel__body" id="panel3">
+                <a href="https://france3-regions.francetvinfo.fr/hauts-de-france/nord-0/lille/cyberattaque-de-la-mairie-de-lille-c-est-une-source-de-donnees-incroyables-pour-les-pirates-informatiques-2725290.html"
+                    target="_blank" style="color: black;">
+                    <div class="wrapper">
+                        <div id="one"><img src="rgpd3.jpg"></div>
+                        <div id="two">
+                            <h3 style="margin-bottom: 10px;">CYBERATTAQUE DE LA MAIRIE DE LILLE : "ON APPREND A
+                                TRAVAILLER SANS ORDINATEUR"</h3>
+                            <p>Retour au papier et au crayon à la mairie de Lille. Les ordinateurs restent éteints, les
+                                systèmes
+                                informatiques sont désactivés depuis la cyber attaque qu'a subi la ville mardi soir. Et
+                                cela pourrait durer.
+                            </p>
+                            <p class="publi">france3-regions.francetvinfo.fr - 3 mars 2023</p>
+                        </div>
+                    </div>
+                </a>
             </div>
 
-
-
-            <div id="Menu2" style="display: none;">
-
-                <div class="wrap-feed">
-                <div class="post-feeds">
-                    <image class="divimage-feed"><img class="image-feed" src="60d5f02dbec0499a64abd8ca_big-data.jpeg">
-                    </image>
-                    <h2 class="titrePost-feed">
-                        <p class="feed-link feed-title">Big data&nbsp;: Titre a insérer Sujet 1 Big data</p>
-                    </h2>
-                    <p class="text-feed" maxlength="4">
-                        Texte RGPD.</p>
-                    <p class="pubDate">Date publication</p>
-    
-                    <a href="https://www.cnil.fr/fr/definition/big-data#:~:text=On%20parle%20depuis%20quelques%20ann%C3%A9es,%2C%20photos%2C%20vid%C3%A9os%2C%20etc."
-                        target="_blank" class="readmore-feed">En savoir
-                        plus</a>
-    
-    
-                </div>
-
-                <div class="post-feeds">
-                    <image class="divimage-feed"><img class="image-feed" src="60d5f02dbec0499a64abd8ca_big-data.jpeg">
-                    </image>
-                    <h2 class="titrePost-feed">
-                        <p class="feed-link feed-title">Big data&nbsp;: Titre a insérer Sujet 2 Big data</p>
-                    </h2>
-                    <p class="text-feed" maxlength="4">
-                        Texte RGPD.</p>
-                    <p class="pubDate">Date publication</p>
-    
-                    <a href="https://www.cnil.fr/fr/definition/big-data#:~:text=On%20parle%20depuis%20quelques%20ann%C3%A9es,%2C%20photos%2C%20vid%C3%A9os%2C%20etc."
-                        target="_blank" class="readmore-feed">En savoir
-                        plus</a>
-    
-    
-                </div>
-
-                <div class="post-feeds">
-                    <image class="divimage-feed"><img class="image-feed" src="60d5f02dbec0499a64abd8ca_big-data.jpeg">
-                    </image>
-                    <h2 class="titrePost-feed">
-                        <p class="feed-link feed-title">Big data&nbsp;: Titre a insérer Sujet 3 Big data</p>
-                    </h2>
-                    <p class="text-feed" maxlength="4">
-                        Texte RGPD.</p>
-                    <p class="pubDate">Date publication</p>
-    
-                    <a href="https://www.cnil.fr/fr/definition/big-data#:~:text=On%20parle%20depuis%20quelques%20ann%C3%A9es,%2C%20photos%2C%20vid%C3%A9os%2C%20etc."
-                        target="_blank" class="readmore-feed">En savoir
-                        plus</a>
-    
-    
-                </div>
+            <div class="Panel__body" id="panel4">
+                <a href="https://www.silicon.fr/meta-dessous-migration-donnees-457080.html" target="_blank"
+                    style="color: black;">
+                    <div class="wrapper">
+                        <div id="one"><img src="bigdata1.jpeg"></div>
+                        <div id="two">
+                            <h3 style="margin-bottom: 10px;">META : LES DESSOUS D'UNE (VASTE) MIGRATION DE DONNEES</h3>
+                            <p>
+                                Meta, maison mère de Facebook et Instagram, a levé le voile sur une vaste opération de
+                                modernisation de sa plateforme de données.
+                                Cependant cette migration de cette ampleur, comme d’autres, sont « difficiles ».
+                            </p>
+                            <p class="publi">silicon.fr - 30 janvier 2023</p>
+                        </div>
+                    </div>
+                </a>
             </div>
+            <div class="Panel__body" id="panel5">
+                <a href="https://comarketing-news.fr/payer-avec-ses-donnees-sur-internet-rien-nest-jamais-vraiment-gratuit/"
+                    target="_blank" style="color: black;">
+                    <div class="wrapper">
+                        <div id="one"><img src="bigdata2.jpg"></div>
+                        <div id="two">
+                            <h3 style="margin-bottom: 10px;"> PAYER AVEC SES DONNEES : SUR INTERNET, RIEN N'EST JAMAIS
+                                VRAIMENT GRATUIT...</h3>
+                            <p>Hackers, réseaux sociaux, marques ou même états… Loin d’être gratuites, nos datas valent
+                                aujourd’hui de l’or…
+                            </p>
+                            <p class="publi">comarketing-news.fr - 20 mars 2023</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="Panel__body" id="panel6">
+                <a href="https://www.lavoixdunord.fr/1303802/article/2023-03-16/ces-metiers-du-big-data-qui-recrutent-en-2023"
+                    target="_blank" style="color: black;">
+                    <div class="wrapper">
+                        <div id="one"><img src="bigdata3.jpg"></div>
+                        <div id="two">
+                            <h3 style="margin-bottom: 10px;">CES METIERS DU BIG DATA QUI RECRUTENT EN 2023</h3>
+                            <p>L’utilisation des données est devenue un enjeu crucial pour les entreprises pour élaborer
+                                de nouvelles stratégies
+                                notamment marketing. Mais le volume de données à traiter est telle que de nouveaux
+                                métiers ont émergé pour les
+                                collecter, stocker, analyser et protéger. En voilà quelques exemples.
+                            </p>
+                            <p class="publi">lavoixdunord.fr - 17 Mars 2023</p>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
 
-        <script>
-            var divs = ["Menu1", "Menu2"];
-            var visibleDivId = null;
-            function toggleVisibility(divId) {
-                if(visibleDivId === divId) {
-                //visibleDivId = null;
-                } else {
-                    visibleDivId = divId;
-                }
-                hideNonVisibleDivs();
-                }
-            function hideNonVisibleDivs() {
-                var i, divId, div;
-                for(i = 0; i < divs.length; i++) {
-                    divId = divs[i];
-                    div = document.getElementById(divId);
-                    if(visibleDivId === divId) {
-                    div.style.display = "block";
-                    } else {
-                    div.style.display = "none";
-                     }
-                }
-            }
-
-            var t=document.querySelector('.col2')
-            
-           
-            
-            </script>
+        <script src="veille-test.js"></script>
 
 
-
-
-        <script type="text/javascript" src="slider-veille.js"></script>
-
-
-
-        <!-- <div id="feed">
-            <div class="wrap-feed">
-                
-
-                
-            <div class="post-feeds">
-                <image class="divimage-feed"><img class="image-feed" src="60d5f02dbec0499a64abd8ca_big-data.jpeg">
-                </image>
-                <h2 class="titrePost-feed">
-                    <p class="feed-link feed-title">RGPD&nbsp;: Titre a insérer Sujet 3 Big data</p>
-                </h2>
-                <p class="text-feed" maxlength="4">
-                    Texte RGPD.</p>
-                <p class="pubDate">Date publication</p>
-
-                <a href="https://www.cnil.fr/fr/definition/big-data#:~:text=On%20parle%20depuis%20quelques%20ann%C3%A9es,%2C%20photos%2C%20vid%C3%A9os%2C%20etc."
-                    target="_blank" class="readmore-feed">En savoir
-                    plus</a>
-
-
-            </div>
-        </div>
-    </div>
--->
 
 
 
@@ -514,15 +559,18 @@
 
 
     </div>
+    <div class="marge"></div>
 
     <div class="aparent">
         <div class="achild" id="slide5" style="height:200px;">
         </div>
     </div>
+    <div class="marge" id="contact"></div>
     <div class="page">
+        <div class="titre1">Contact</div>
         <div class="contact-container">
             <div class="title-div">
-                <p class="titre">Contactez-moi</p>
+                <div class="titre">Je vous apporterez une réponse sous 24 heures</div>
             </div>
 
             <div class="contact">
@@ -535,10 +583,10 @@
                             class="links">Linkedin</a>
                     </div>
                     <div class="ligne">
-                        <a href="#" class="social-contact">
+                        <a href="https://www.github.com/AntoineCvlz" class="social-contact">
                             <ion-icon name="logo-github"></ion-icon>
                         </a>
-                        <a href="#" target="_blank" class="links">Github</a>
+                        <a href="https://github.com/AntoineCvlz" target="_blank" class="links">Github</a>
                     </div>
                     <div class="ligne">
                         <a href="mailto:antoine.cuvilliez@outlook.fr" class="social-contact">
@@ -547,10 +595,10 @@
                         <a href="mailto:antoine.cuvilliez@outlook.fr" target="_blank" class="links">Mail</a>
                     </div>
                     <div class="ligne">
-                        <a href="#" class="social-contact">
+                        <a href="" class="social-contact">
                             <ion-icon name="call-outline"></ion-icon>
                         </a>
-                        <a href="tel:+33749391402" target="_blank" class="links">Téléphone</a>
+                        <a href="" target="_blank" class="links">Téléphone</a>
                     </div>
 
                 </div>
@@ -570,8 +618,8 @@
                         <textarea id="message" rows="3" placeholder="Message" required></textarea>
                     </div>
 
-                    <div class="g-recaptcha" id="captcha" data-sitekey="6LeIOaEkAAAAAMgI0QB8Jafgo92i72O5OgGjG8Ek"
-                        required></div>
+                    <!-- <div class="g-recaptcha" id="captcha" data-sitekey="6LeIOaEkAAAAAMgI0QB8Jafgo92i72O5OgGjG8Ek"
+                        required></div> -->
 
 
                     <a type="submit" class="btn-submit" id="2" onclick="sendMail()">Envoyer</a>
@@ -583,7 +631,7 @@
         </div>
 
     </div>
-    </div>
+    <div class="marge"></div>
 
 
 
@@ -602,36 +650,21 @@
     <footer>
         <div class="div-footer">
             <div class="footer-top">
-                <!-- <div class="footer-col">
-                    <h3>A propos</h3>
-                    <a href="#">Services</a>
-                    <a href="#">Histoire de l'entreprise</a>
-                    <a href="#">Nos Clients</a>
-                    <a href="#">Carrière</a>
-                </div> -->
                 <div class="footer-col">
-                    <h3>Ressources</h3>
-                    <a href="#">Documents</a>
-                    <a href="#">Blog</a>
-                    <a href="#">eBooks</a>
-                    <a href="#">Webinaires</a>
-                </div>
-                <div class="footer-col">
-                    <h3>Contact</h3>
-                    <a href="#">Aide & Conseils</a>
-                    <a href="#">SAV</a>
-                    <a href="#">Demande de devis</a>
+                    <a>Copyright © 2023 - Antoine Cuvilliez - </a>
+                    <a href="Mentions légales.pdf" target="_blank">Mentions légales</a>
+
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <a href="#" class="social">
+                <a href="https://www.linkedin.com/in/antoine-cuvilliez-257969225/" class="social">
                     <ion-icon name="logo-linkedin"></ion-icon>
                 </a>
-                <a href="#" class="social">
+                <a href="https://www.github.com/AntoineCvlz" class="social">
                     <ion-icon name="logo-github"></ion-icon>
                 </a>
-                <a href="#" class="social">
+                <a href="mailto:antoine.cuvilliez@outlook.fr" class="social">
                     <ion-icon name="mail-open"></ion-icon>
                 </a>
             </div>

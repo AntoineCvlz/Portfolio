@@ -1,9 +1,16 @@
-function sendMail() {
+
+
+var valAB=0;
+
+
+function sendMail(){
+if (valAB==0){
+    
     var params = {
         name: document.getElementById("name").value,
         email: document.getElementById("email").value,
         message: document.getElementById("message").value,
-        captcha: document.getElementById("captcha").value,
+
     
     };
 
@@ -18,14 +25,43 @@ function sendMail() {
             document.getElementById("name").value = "";
             document.getElementById("email").value = "";
             document.getElementById("message").value = "";
-            document.getElementById("captcha").value = "";
             console.log(res);
             alert("Ton message vient d'être envoyé !")
 
         })
         .catch(err => console.log(err));
 
+
+
+
+
+
+
+    valAB=1;
+    console.log(valAB);
+    AntiBot();
 }
+else{
+    //le sendmail marche pas
+    AntiBot();
+    console.log(valAB + 'vv');
+    alert('Envoie en Cooldown');
+}
+
+}
+
+function ValeurAntiBot(){
+    valAB=0;
+}
+
+function AntiBot(){
+    
+  setTimeout(function () {
+    ValeurAntiBot();
+  }, 30000);
+
+}
+
 
 
 function showFeed(data) {
