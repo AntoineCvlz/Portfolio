@@ -73,8 +73,16 @@ header {
     display: flex;
 }
 
+/* .txt-title {
+    z-index: 99999;
+    color: white;
+    font-size: 4em;
+    margin: 0 auto;
+    margin-top: 42vh;
+} */
 
-.menu-main {
+
+/* .menu-main {
     margin: 0;
     display: flex;
     width: 100%;
@@ -82,7 +90,7 @@ header {
     justify-content: center;
     align-items: center;
     position: relative;
-}
+} */
 
 /* .menu-main .blur{
     position: absolute;
@@ -94,7 +102,7 @@ header {
     background-color: #0000008f;
 } */
 
-.gauche {
+/* .gauche {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -118,7 +126,7 @@ header {
     letter-spacing: 1.2px;
     text-align: center;
     color: white;
-}
+} */
 
 
 
@@ -169,7 +177,24 @@ header {
 }
 
 
+.div-ecriture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: center;
+    margin: 0 auto;
 
+}
+
+.ecriture {
+    display: flex;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+
+}
 
 @media screen and (max-width: 1000px) {
     .navbar {
@@ -182,6 +207,7 @@ header {
 
     .navbar .logo {
         position: absolute;
+        font-size: 1.7em;
        
     }
 
@@ -196,8 +222,7 @@ header {
         top: 0;
         left: 0;
         position: absolute;
-        background-color: rgba(255, 255, 255, 0.20);
-        backdrop-filter: blur(7px);
+        background-color: #212121;
         width: 100%;
         height: 100vh;
         display: flex;
@@ -226,29 +251,16 @@ header {
     }
 
     .navbar .nav-links ul li a {
-        color: black;
+        color: white;
+    }
+
+    .ecriture {
+        font-size: 1.2em;
     }
     
 }
 
 
-.div-ecriture {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    vertical-align: center;
-    margin: 0 auto;
-
-}
-
-.ecriture {
-    display: flex;
-    color: #fff;
-    align-items: center;
-    justify-content: center;
-    align-items: center;
-
-}
 
 
 @keyframes animate {
@@ -1532,6 +1544,51 @@ footer h3 {
 
 @media screen and (max-width: 375px) {
     .footer-col{
-        font-size: 13px;
+        font-size: 12px;
     }
 }
+
+@media screen and (max-width: 500px) {
+    #div-message2{
+        text-align: center;
+        font-size: 12px;
+        margin-left: -22px;
+        margin-right: 5px;
+    }
+
+    #name {
+        margin-left: -1px;
+    }
+    #email {
+        margin-left: -1px;
+    }
+    #message {
+        margin-left: -1px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

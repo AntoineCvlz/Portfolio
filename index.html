@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Logo AC.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <!-- Icon -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"></script>
@@ -29,6 +30,10 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"></script>
     <script src="https://kit.fontawesome.com/abadf74544.js" crossorigin="anonymous"></script>
+
+
+
+
 
 
 
@@ -88,9 +93,9 @@
 
         </script>
 
-    
 
-        <!-- <div class="div-ecriture">
+
+        <div class="div-ecriture">
             <div class="ecriture">
 
                 <h2><span class="auto-type"></span></h2>
@@ -106,19 +111,14 @@
                     loop: true
                 })
             </script>
-        </div> -->
-    
-        
-
-        <div class="menu-main">
-            
-            <div class="gauche">
-                <h3>Portfolio</h3>
-            </div>
-            <div class="droite">
-                <img class="img-main" src="PC.png">
-            </div>
         </div>
+
+
+
+        
+        <!-- <div class="txt-title">
+            Portfolio
+        </div> -->
 
     </header>
 
@@ -158,7 +158,7 @@
                         </div>
                     </div>
                     <div class="topic-title" style="color: white; margin-top: 20px;">
-                        <h2>Curiosité</h2>
+                        <h2>Curieux</h2>
                     </div>
                 </div>
                 <div class="topic"
@@ -169,7 +169,7 @@
                         </div>
                     </div>
                     <div class="topic-title" style="color: white; margin-top: 20px;">
-                        <h2>Autonomie</h2>
+                        <h2>Autonome</h2>
                     </div>
                 </div>
                 <div class="topic"
@@ -180,7 +180,7 @@
                         </div>
                     </div>
                     <div class="topic-title" style="color: white; margin-top: 20px;">
-                        <h2>Perséverance</h2>
+                        <h2>Perséverant</h2>
                     </div>
                 </div>
                 <div class="topic"
@@ -191,7 +191,7 @@
                         </div>
                     </div>
                     <div class="topic-title" style="color: white; margin-top: 20px;">
-                        <h2>Passion</h2>
+                        <h2>Passionné</h2>
                     </div>
                 </div>
             </div>
@@ -372,9 +372,10 @@
                     <img class="img-project lpf" src="lpf_logo_noir.png">
                     <h2>LPF Clinique</h2>
                     <p>
-                        Projet professionnel effectués durant toute l'année
+                        Réalisation d'une application web permettant d'assurer les préadmission d'une clinique fictive,
+                        l'ajout / suppression de préadmission ou médecin, la possibilité pour un médecin de consulter
+                        les statistiques de ses rendez-vous pour une semain donnée, la génération de pdf ...
                     </p>
-                    <a href="">En savoir plus</a>
                 </div>
             </div>
         </div>
@@ -384,21 +385,27 @@
                 <div class="content content-2">
                     <img class="img-project SET" src="SET-Système-étude-technique.png">
                     <h2>SET</h2>
-                    <p>Stage de 1ère année</p>
-                    <a href="">En savoir plus</a>
+                    <p>
+                        Réalisation d'une application web permettant d'intéragir avec un robot Nyrio.
+                    </p>
+                    
                 </div>
 
                 <div class="content content-3">
                     <img class="img-project bils" src="BILSDEROO-GROUPE-logo-noir-1.png">
                     <h2>Bils-Deroo</h2>
                     <p>
-                        Stage de 2ème année
+                        Refonte du portail intranet en C#. Ajout de fonctionnalités / Tests unitaires
                     </p>
-                    <a href="">En savoir plus</a>
                 </div>
             </div>
         </div>
     </div>
+
+
+
+
+
     <div class="marge"></div>
 
 
@@ -620,7 +627,15 @@
 
                     <!-- <div class="g-recaptcha" id="captcha" data-sitekey="6LeIOaEkAAAAAMgI0QB8Jafgo92i72O5OgGjG8Ek"
                         required></div> -->
-
+                    <div class="div-message" id="div-message2">
+                        
+                        <label for="message" style="margin-bottom: 20px;">
+                            <span class="star">*</span>
+                            Accord RGPD (Règlement Général sur la Protection des Données) : Vous consentez à 
+                            ce que vos données soient uniquement utilisées à des fins de nominations et non de commercialisations
+                        </label>
+        
+                    </div>
 
                     <a type="submit" class="btn-submit" id="2" onclick="sendMail()">Envoyer</a>
                 </form>
